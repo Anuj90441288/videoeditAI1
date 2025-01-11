@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Video Editing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section class="banner">
+        <h1>AI Video Editing Simplified</h1>
+        <p>Let AI help you create amazing videos with ease. Edit, enhance, and collaborate in real time!</p>
+        <button onclick="window.location.href='#upload'">Get Started</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-card">
+            <h3>AI-Powered Auto Editing</h3>
+            <p>Automatically trim and merge clips, remove silences, and suggest transitions.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Smart Effects and Filters</h3>
+            <p>Enhance colors, brighten scenes, and apply effects with real-time previews.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Voice & Sound Editing</h3>
+            <p>Clean audio, auto subtitles, and AI-generated background music.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Real-Time Collaboration</h3>
+            <p>Work on projects together with friends, colleagues, or clients.</p>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload" id="upload">
+        <h2>Upload Your Video</h2>
+        <input type="file" id="videoUpload" accept="video/*">
+        <button id="uploadBtn" onclick="uploadVideo()">Upload</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 AI Video Editor. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

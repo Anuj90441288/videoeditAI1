@@ -1,0 +1,101 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.banner h1 {
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.banner button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: #0056b3;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 20px;
+}
+
+.feature-card p {
+    font-size: 14px;
+}
+
+/* Upload Section */
+.upload {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.upload input {
+    padding: 10px;
+    margin: 20px 0;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
