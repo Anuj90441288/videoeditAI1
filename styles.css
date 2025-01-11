@@ -1,101 +1,35 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+document.getElementById('uploadBtn').addEventListener('click', function() {
+    const videoFile = document.getElementById('videoFile').files[0];
+    if (!videoFile) {
+        alert('Please upload a video file!');
+        return;
+    }
+
+    // Simulate video upload and AI processing
+    alert(`Video file "${videoFile.name}" uploaded and processing with AI...`);
+
+    // Simulating AI processing (you can integrate real AI processing here)
+    simulateAIProcessing(videoFile);
+});
+
+// Simulating AI video processing (you can replace this with actual AI backend processing)
+function simulateAIProcessing(file) {
+    // Here, we will just simulate that we processed the video
+    setTimeout(function() {
+        alert('AI processing complete! Your video is ready for preview.');
+
+        // Show processed video preview (simulated here)
+        document.getElementById('processedVideo').src = URL.createObjectURL(file);
+        document.getElementById('preview').style.display = 'block';
+        document.getElementById('downloadBtn').style.display = 'inline-block';
+    }, 5000); // Simulate 5 seconds processing time
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Banner Styling */
-.banner {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.banner h1 {
-    font-size: 36px;
-}
-
-.banner p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.banner button {
-    padding: 15px 25px;
-    font-size: 18px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.banner button:hover {
-    background-color: #0056b3;
-}
-
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.feature-card {
-    background-color: white;
-    padding: 20px;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card h3 {
-    font-size: 20px;
-}
-
-.feature-card p {
-    font-size: 14px;
-}
-
-/* Upload Section */
-.upload {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.upload input {
-    padding: 10px;
-    margin: 20px 0;
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-}
+// Handle download of the processed video
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const videoFile = document.getElementById('videoFile').files[0];
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(videoFile);
+    link.download = 'processed_video.mp4';
+    link.click();
+});
